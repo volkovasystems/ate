@@ -1,0 +1,27 @@
+{
+  "name": "ate",
+  "version": "0.0.0",
+  "description": "Set value.",
+  "main": "ate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/ate.git"
+  },
+  "keywords": [
+    "set",
+    "value",
+    "ate"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/ate/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/ate#readme",
+  "dependencies": {
+    "zelf": "0.0.4"
+  }
+}

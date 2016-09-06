@@ -1,0 +1,25 @@
+{
+  "name": "ate",
+  "description": "Set value.",
+  "main": "ate.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "set",
+    "value",
+    "ate"
+  ],
+  "homepage": "https://github.com/volkovasystems/ate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zelf": "^0.0.4"
+  }
+}
