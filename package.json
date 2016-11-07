@@ -1,6 +1,6 @@
 {
   "name": "ate",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Set value.",
   "main": "ate.js",
   "scripts": {
@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/volkovasystems/ate#readme",
   "dependencies": {
-    "zelf": "0.0.4"
+    "falzy": "^0.1.0",
+    "protype": "0.0.0",
+    "zelf": "^0.1.0"
   }
 }

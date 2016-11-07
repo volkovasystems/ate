@@ -53,13 +53,29 @@
 
 	@include:
 		{
+			"falzy": "falzy",
+			"protype": "protype",
 			"zelf": "zelf"
 		}
 	@end-include
 */
 
-if( typeof window == "undefined" ){
+if( typeof require == "function" ){
+	var falzy = require( "falzy" );
+	var protype = require( "protype" );
 	var zelf = require( "zelf" );
+}
+
+if( typeof window != "undefined" &&
+	!( "falzy" in window ) )
+{
+	throw new Error( "falzy is not defined" );
+}
+
+if( typeof window != "undefined" &&
+	!( "protype" in window ) )
+{
+	throw new Error( "protype is not defined" );
 }
 
 if( typeof window != "undefined" &&
@@ -68,7 +84,7 @@ if( typeof window != "undefined" &&
 	throw new Error( "zelf is not defined" );
 }
 
-var ate = function ate( property, value, entity ){
+this.ate = function ate( property, value, entity ){
 	/*;
 		@meta-configuration:
 			{
@@ -79,9 +95,7 @@ var ate = function ate( property, value, entity ){
 		@end-meta-configuration
 	*/
 
-	if( !property ||
-		typeof property != "string" )
-	{
+	if( falzy( property ) || !protype( property ).STRING ){
 		throw new Error( "invalid property" );
 	}
 
@@ -94,6 +108,8 @@ var ate = function ate( property, value, entity ){
 	return entity;
 };
 
-if( typeof module != "undefined" ){
-	module.exports = ate;
+if( typeof module != "undefined" &&
+	typeof module.exports != "undefined" )
+{
+	module.exports = this.ate;
 }
