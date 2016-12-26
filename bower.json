@@ -1,8 +1,10 @@
 {
   "name": "ate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Set value.",
   "main": "ate.js",
+  "support": "ate.support.js",
+  "deploy": "ate.deploy.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
   ],
@@ -21,8 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "falzy": "^0.5.0",
-    "protype": "^0.4.0",
-    "zelf": "^0.3.0"
+    "falzy": "^0.7.0",
+    "protype": "^0.7.0",
+    "zelf": "^0.4.0"
   }
 }

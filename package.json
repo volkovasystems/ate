@@ -1,10 +1,13 @@
 {
   "name": "ate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Set value.",
   "main": "ate.js",
+  "support": "ate.support.js",
+  "deploy": "ate.deploy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ate.js -o ate.support.js && webpack",
+    "test": "mocha ate-test.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,17 @@
   },
   "homepage": "https://github.com/volkovasystems/ate#readme",
   "dependencies": {
-    "falzy": "^0.5.0",
-    "protype": "^0.4.0",
-    "zelf": "^0.3.0"
+    "babel-runtime": "^6.20.0",
+    "falzy": "^0.7.0",
+    "protype": "^0.7.0",
+    "zelf": "^0.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.14.0"
   }
 }
