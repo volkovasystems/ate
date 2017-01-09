@@ -3,7 +3,7 @@
 		The MIT License (MIT)
 		@mit-license
 
-		Copyright (@c) 2016 Richeve Siodina Bebedor
+		Copyright (@c) 2017 Richeve Siodina Bebedor
 		@email: richeve.bebedor@gmail.com
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -82,7 +82,7 @@ const ate = function ate( property, value, entity ){
 	entity = entity || zelf( this );
 
 	try{
-		Object.defineProperty( entity, property, { "value": value } );
+		Object.defineProperty( entity, property, { "value": value, "writable": true } );
 	}catch( error ){ }
 
 	return entity;
