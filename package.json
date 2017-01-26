@@ -1,6 +1,6 @@
 {
   "name": "ate",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Set value.",
   "main": "ate.js",
   "support": "ate.support.js",
@@ -19,23 +19,26 @@
     "ate"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/ate/issues"
   },
   "homepage": "https://github.com/volkovasystems/ate#readme",
   "dependencies": {
-    "babel-runtime": "^6.20.0",
-    "falzy": "^0.7.0",
-    "protype": "^0.8.0",
-    "zelf": "^0.4.0"
+    "babel-runtime": "^6.22.0",
+    "falzy": "^0.8.0",
+    "protype": "^0.9.0",
+    "zelf": "^0.5.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.21.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-latest": "^6.16.0",
-    "source-map-loader": "^0.1.5",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "source-map-loader": "^0.1.6",
     "webpack": "^1.14.0"
   }
 }
