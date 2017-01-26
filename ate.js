@@ -1,3 +1,5 @@
+"use strict";
+
 /*;
 	@module-license:
 		The MIT License (MIT)
@@ -32,6 +34,9 @@
 			"file": "ate.js",
 			"module": "ate",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"email": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/ate.git",
 			"test": "ate-test.js",
