@@ -5,4 +5,4 @@ const ate = require( "./ate.js" );
 let child = function Merchant( ) { };
 let connector = function connector( ){ };
 
-ate( "name", child.name, connector );
+console.log( ate( "name", child.name, connector ) );
