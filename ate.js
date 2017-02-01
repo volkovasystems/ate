@@ -49,9 +49,12 @@
 
 		If entity is given, the property will be bound to the entity.
 
-		Else, if this module is used in the browser, the entity defaults to the @code:window;.
+		The property is enumerable and writable but not configurable.
+		So you can reaasign new values but you cannot change the property descriptor.
 
-		Else, if this module is used in a NodeJS environment, the entity defaults to @code:global;.
+		Else, if this module is used in the browser, the entity defaults to the `window`.
+
+		Else, if this module is used in a NodeJS environment, the entity defaults to `global`.
 
 		This will override the value.
 	@end-module-documentation
@@ -87,7 +90,11 @@ const ate = function ate( property, value, entity ){
 	entity = entity || zelf( this );
 
 	try{
-		Object.defineProperty( entity, property, { "value": value, "writable": true } );
+		Object.defineProperty( entity, property, {
+			"value": value,
+			"writable": true,
+			"enumerable": true
+		} );
 	}catch( error ){ }
 
 	return entity;
