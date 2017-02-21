@@ -16,4 +16,5 @@ bower install \
 falzy \
 protype \
 zelf \
---save
+--save \
+--force-latest

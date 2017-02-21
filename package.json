@@ -1,13 +1,13 @@
 {
   "name": "ate",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Set value.",
   "main": "ate.js",
   "support": "ate.support.js",
   "deploy": "ate.deploy.js",
   "browser": "ate.deploy.js",
   "scripts": {
-    "build": "babel ate.js --out-file ate.support.js --source-maps && webpack --progress",
+    "build": "babel ate.js --out-file ate.support.js --source-maps && webpack --progress --display-modules",
     "test": "mocha ate-test.js"
   },
   "repository": {
