@@ -1,6 +1,6 @@
 {
   "name": "ate",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Set value.",
   "main": "ate.deploy.js",
   "support": "ate.support.js",
@@ -23,8 +23,8 @@
     "tests"
   ],
   "dependencies": {
-    "falzy": "^0.16.0",
-    "protype": "^0.20.0",
-    "zelf": "^0.10.0"
+    "falzy": "^0.17.0",
+    "protype": "^0.21.0",
+    "zelf": "^0.11.0"
   }
 }
