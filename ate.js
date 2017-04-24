@@ -45,7 +45,7 @@
 	@module-documentation:
 		Force set value.
 
-		The property is configurable, enumerable and writable.
+		The property is non-configurable, enumerable and writable.
 		This will override existing value.
 	@end-module-documentation
 
@@ -88,7 +88,7 @@ const ate = function ate( property, value, entity ){
 		Object.defineProperty( entity, property, {
 			"value": value,
 
-			"configurable": true,
+			"configurable": false,
 			"enumerable": true,
 			"writable": true
 		} );

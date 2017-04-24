@@ -1,6 +1,6 @@
 {
   "name": "ate",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "Force set value.",
   "main": "ate.deploy.js",
   "support": "ate.support.js",
