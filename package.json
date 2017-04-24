@@ -1,7 +1,7 @@
 {
   "name": "ate",
-  "version": "0.16.0",
-  "description": "Set value.",
+  "version": "0.17.0",
+  "description": "Force set value.",
   "main": "ate.js",
   "support": "ate.support.js",
   "deploy": "ate.deploy.js",
@@ -15,6 +15,7 @@
     "url": "git+https://github.com/volkovasystems/ate.git"
   },
   "keywords": [
+    "force",
     "set",
     "value",
     "ate"
@@ -32,6 +33,7 @@
     "babel-runtime": "^6.23.0",
     "falzy": "^0.19.0",
     "protype": "^0.21.0",
+    "wichevr": "^0.8.0",
     "zelf": "^0.11.0"
   },
   "devDependencies": {

@@ -1,9 +1,7 @@
-"use strict";
 
 const ate = require( "./ate.js" );
 
-let child = function Merchant( ) { };
-let connector = function connector( ){ };
+let test = { };
+ate( "sample", 123, test );
 
-console.log( ate( "name", child.name, connector ) );
-console.log( ate( ) );
+console.log( Object.getOwnPropertyDescriptor( test, "sample" ) );

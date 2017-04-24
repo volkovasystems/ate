@@ -43,24 +43,17 @@
                                                                                                                                                                                                                                                         	@end-module-configuration
                                                                                                                                                                                                                                                         
                                                                                                                                                                                                                                                         	@module-documentation:
-                                                                                                                                                                                                                                                        		Set value.
+                                                                                                                                                                                                                                                        		Force set value.
                                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                                        		If entity is given, the property will be bound to the entity.
-                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                        		The property is enumerable and writable but not configurable.
-                                                                                                                                                                                                                                                        		So you can reaasign new values but you cannot change the property descriptor.
-                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                        		Else, if this module is used in the browser, the entity defaults to the `window`.
-                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                        		Else, if this module is used in a NodeJS environment, the entity defaults to `global`.
-                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                        		This will override the value.
+                                                                                                                                                                                                                                                        		The property is configurable, enumerable and writable.
+                                                                                                                                                                                                                                                        		This will override existing value.
                                                                                                                                                                                                                                                         	@end-module-documentation
                                                                                                                                                                                                                                                         
                                                                                                                                                                                                                                                         	@include:
                                                                                                                                                                                                                                                         		{
                                                                                                                                                                                                                                                         			"falzy": "falzy",
                                                                                                                                                                                                                                                         			"protype": "protype",
+                                                                                                                                                                                                                                                        			"wichevr": "wichevr",
                                                                                                                                                                                                                                                         			"zelf": "zelf"
                                                                                                                                                                                                                                                         		}
                                                                                                                                                                                                                                                         	@end-include
@@ -68,30 +61,37 @@
 
 var falzy = require("falzy");
 var protype = require("protype");
+var wichevr = require("wichevr");
 var zelf = require("zelf");
 
 var ate = function ate(property, value, entity) {
 	/*;
                                                  	@meta-configuration:
                                                  		{
-                                                 			"property:required": "string",
+                                                 			"property:required": [
+                                                 				"number",
+                                                 				"string"
+                                                 			],
                                                  			"value:required": "*",
-                                                 			"entity:optional": "object"
+                                                 			"entity": "*"
                                                  		}
                                                  	@end-meta-configuration
                                                  */
 
-	if (falzy(property) || !protype(property, STRING)) {
+	if (falzy(property) || !protype(property, NUMBER + STRING)) {
 		throw new Error("invalid property");
 	}
 
-	entity = entity || zelf(this);
+	entity = wichevr(entity, zelf(this));
 
 	try {
 		(0, _defineProperty2.default)(entity, property, {
 			"value": value,
-			"writable": true,
-			"enumerable": true });
+
+			"configurable": true,
+			"enumerable": true,
+			"writable": true });
+
 
 	} catch (error) {}
 
