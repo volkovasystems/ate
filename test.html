@@ -1,8 +1,37 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./ate.deploy.js">
-		</script>
+		<title>ate unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./ate.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "ate unit test", function( assert ) {
+
+				let test = { };
+				ate( "sample", 123, test );
+
+				let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+
+				assert.equal( descriptor.value, 123, "should return 123" );
+
+				assert.equal( descriptor.writable, true, "should be true" );
+
+				assert.equal( descriptor.enumerable, true, "should be true" );
+
+				assert.equal( descriptor.configurable, false, "should be false" );
+
+			} );
+		</script>
+	</body>
 </html>
