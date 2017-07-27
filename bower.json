@@ -1,33 +1,33 @@
 {
-  "name": "ate",
-  "version": "0.20.0",
-  "description": "Force set value.",
-  "main": "ate.deploy.js",
-  "support": "ate.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "force",
-    "set",
-    "value",
-    "ate"
-  ],
-  "homepage": "https://github.com/volkovasystems/ate",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "protype": "^0.22.0",
-    "wichevr": "^0.10.0",
-    "zelf": "^0.12.0"
-  }
+	"name": "ate",
+	"version": "0.21.0",
+	"description": "Force set value.",
+	"main": "ate.deploy.js",
+	"support": "ate.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"force",
+		"set",
+		"value",
+		"ate"
+	],
+	"homepage": "https://github.com/volkovasystems/ate",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"falzy": "^0.23.0",
+		"protype": "^0.24.0",
+		"wichevr": "^0.14.0",
+		"zelf": "^0.14.0"
+	}
 }
