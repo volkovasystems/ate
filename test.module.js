@@ -73,6 +73,8 @@ const path = require( "path" );
 
 describe( "ate", ( ) => {
 
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
 	describe( "Property descriptor value", ( ) => {
 
 		it( "should be equal to 123", ( ) => {
@@ -93,6 +95,7 @@ describe( "ate", ( ) => {
 		} );
 
 	} );
+
 
 	describe( "Property descriptor writable", ( ) => {
 
