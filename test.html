@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>ate unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:ate</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./ate.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "ate unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				let test = { };
-				ate( "sample", 123, test );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
-
-				assert.equal( descriptor.value, 123, "should be equal to 123" );
-
-				assert.equal( descriptor.writable, true, "should be equal to true" );
-
-				assert.equal( descriptor.enumerable, true, "should be equal to true" );
-
-				assert.equal( descriptor.configurable, false, "should be equal to false" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
