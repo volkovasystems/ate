@@ -65,4 +65,65 @@ const ate = require( "./ate.js" );
 
 
 
+//: @server:
+
+describe( "ate", ( ) => {
+
+	describe( "`Property descriptor value`", ( ) => {
+		it( "should be equal to 123", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.value, 123 );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.writable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+} );
+
+//: @end-server
+
+
+
 

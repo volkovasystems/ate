@@ -69,14 +69,131 @@ const ate = require( "./ate.support.js" );
 const path = require( "path" );
 //: @end-bridge
 
+//: @server:
+
+describe( "ate", ( ) => {
+
+	describe( "`Property descriptor value`", ( ) => {
+		it( "should be equal to 123", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.value, 123 );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.writable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+} );
+
+//: @end-server
+
+//: @client:
+
+describe( "ate", ( ) => {
+
+	describe( "`Property descriptor value`", ( ) => {
+		it( "should be equal to 123", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.value, 123 );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor writable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.writable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+
+	describe( "`Property descriptor configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			ate( "sample", 123, test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "sample" );
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+} );
+
+//: @end-client
+
 //: @bridge:
 
 describe( "ate", ( ) => {
 
 	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
-	describe( "Property descriptor value", ( ) => {
-
+	describe( "`Property descriptor value`", ( ) => {
 		it( "should be equal to 123", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -93,12 +210,10 @@ describe( "ate", ( ) => {
 			assert.equal( result, 123 );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor writable", ( ) => {
-
+	describe( "`Property descriptor writable`", ( ) => {
 		it( "should be equal to true", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -115,12 +230,10 @@ describe( "ate", ( ) => {
 			assert.equal( result, true );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor enumerable", ( ) => {
-
+	describe( "`Property descriptor enumerable`", ( ) => {
 		it( "should be equal to true", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -137,12 +250,10 @@ describe( "ate", ( ) => {
 			assert.equal( result, true );
 
 		} );
-
 	} );
 
 
-	describe( "Property descriptor configurable", ( ) => {
-
+	describe( "`Property descriptor configurable`", ( ) => {
 		it( "should be equal to false", ( ) => {
 			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
@@ -159,7 +270,6 @@ describe( "ate", ( ) => {
 			assert.equal( result, false );
 
 		} );
-
 	} );
 
 } );
